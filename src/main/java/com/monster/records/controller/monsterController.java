@@ -1,6 +1,6 @@
 package com.monster.records.controller;
 
-import java.util.List;
+import java.util.List; 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import com.monster.records.exceptions.ResourceNotFoundException;
 import com.monster.records.model.monster;
 import com.monster.records.repository.monsterRepository;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins={"https://kevinortiz43.github.io","localhost:3000"})
 @RestController
 @RequestMapping("/monster/")
 public class monsterController {

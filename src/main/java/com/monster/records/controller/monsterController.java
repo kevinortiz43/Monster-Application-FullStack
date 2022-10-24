@@ -1,29 +1,20 @@
 package com.monster.records.controller;
 
-import java.util.List; 
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.monster.records.exceptions.ResourceNotFoundException;
 import com.monster.records.model.monster;
 import com.monster.records.repository.monsterRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins={"https://kevinortiz43.github.io","localhost:3000"})
+import java.util.List;
+
+@CrossOrigin(origins={"https://kevinortiz43.github.io","localhost:3000", "localhost:4200"})
 @RestController
 @RequestMapping("/monster/")
 public class monsterController {
 
-	@Autowired
+	@Autowired 
 	private monsterRepository monsterRepo;
 
 	@GetMapping("/allmonsters")
